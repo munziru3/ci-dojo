@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="title" content="CI Dojo">
+        <meta name="description" content="Kitab saktinya Codeigniter.">
+        <title>CI Dojo</title>
+        <link rel="stylesheet" href="assets/css/pure-min.css"><!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="assets/css/main.css"><!--<![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/email-old-ie.min.css"><![endif]--> 
+    </head> 
+    <body>
+        <div id="layout" class="content pure-g">
+            <div id="nav" class="pure-u-1">
+                <a href="#" class="nav-menu-button">Menu</a>
+                <div class="nav-inner">
+                    <h1 class="light">CI Dojo</h1>
+                    <div class="pure-menu">
+                        <ul class="pure-menu-list">
+                            <li class="pure-menu-item"><a href="index.html" class="pure-menu-link active"><i class="fa fa-info-circle" style="margin-right: 6px;"></i>Tentang</a></li>
+                            <li class="pure-menu-heading">Bab I</li>
+                            <li class="pure-menu-item"><a href="codeigniter" class="pure-menu-link"><span class="email-label-personal"></span>Codeigniter</a></li>
+                            <li class="pure-menu-item"><a href="mvc" class="pure-menu-link"><span class="email-label-travel"></span>MVC</a></li>
+                            <li class="pure-menu-item"><a href="php" class="pure-menu-link"><span class="email-label-work"></span>PHP</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-inner">
+                    <small><a href="https://github.com/ezralazuardy/ci-dojo" target="_blank">&copy; 2019. CI Dojo.</a></small>
+                </div>
+            </div>
+            <div id="main" class="pure-u-1">
+                <div class="email-content">
+                    <div class="email-content-header pure-g">
+                        <div class="pure-u-5-5">
+                            <h1 class="email-content-title">Tentang</h1>
+                            <p class="email-content-subtitle">
+                                <small><span>ditulis oleh </span><a href="https://ezralazuardy.tk" target="_blank">Ezra Lazuardy</a></small><br/>
+                                <button onclick="javascript:share(window.location.href);" class="primary-button pure-button bg-vader"><i class="fa fa-share-alt" style="margin-right: 4px;"></i> Bagikan</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="email-content-body">
+                        <p>
+                            Hello World!, selamat datang di <i>ce i dojo</i>, kitab saktinya kode igniter.
+                        </p>
+                        <p>
+                            Disini kamu bisa belajar apa saja tentang Codeigniter secara singkat. <br>Dilengkapi dengan 
+                            dokumentasi berbahasa Indonesia, diringkas secara singkat, namun padat dan jelas :).
+                        </p>
+                        <p>
+                            Materi akan disajikan berurutan per bab, dibahas mulai dari yang dasar dulu, sampai ke tingkat lanjut.
+                            Mulai dari konfigurasi CI, konsep MVC (Model View Controller), CRUD database, hingga library akan dibahas disini.
+                        </p>
+                        <p>
+                            Semua konten CI Dojo bersifat <b>Open Source</b>, dapat digunakan secara bebas oleh publik.<br>
+                            Dilisensi dengan <a href="LICENSE.md">BSD License</a>.
+                        </p>
+                        <br/><br/>
+                        <p>
+                            <h4>Perangkat lunak pihak ketiga</h4>
+                            <p>
+                                Beberapa perangkat lunak yang mempercantik tampilan laman <b>CI Dojo</b>.
+                            </p>
+                            <p style="margin-top: 25px;">
+                                <a href="https://purecss.io/" target="_blank" style="margin-right: 20px;">
+                                    <img src="assets/img/logo_pure.png" width="240" height="40" alt="PureCSS" style=" margin-bottom: 20px;" />
+                                </a>
+                                <a href="https://github.com/" target="_blank" style="margin-right: 20px;">
+                                    <img src="assets/img/logo_github.png" width="150" height="38" alt="GitHub" style=" margin-bottom: 20px;" />
+                                </a>
+                                <a href="https://sweetalert.js.org/" target="_blank" style="margin-right: 20px;">
+                                    <img src="assets/img/logo_swal.png" width="240" height="40" alt="SweetAlert" style=" margin-bottom: 20px;" />
+                                </a>
+                                <a href="https://yuilibrary.com/" target="_blank" style="margin-right: 20px;">
+                                    <img src="assets/img/logo_yui.png" width="120" height="60" alt="YUI" style=" margin-bottom: 20px;" />
+                                </a>
+                            </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script async defer type="text/javascript" src="assets/js/fontawesome.min.js"></script>
+        <script async defer type="text/javascript" src="assets/js/sweetalert.min.js"></script>
+        <script type="text/javascript" src="assets/js/yui-min.js"></script>
+        <script type="text/javascript">
+            YUI().use('node-base', 'node-event-delegate', function (Y) {
+                var menuButton = Y.one('.nav-menu-button'), nav = Y.one('#nav');
+                menuButton.on('click', function (e) {
+                    nav.toggleClass('active');
+                });
+            });
+            function share(link = '') {
+                var dummy = document.createElement("textarea");
+                document.body.appendChild(dummy);
+                dummy.value = link;
+                dummy.select();
+                document.execCommand("copy");
+                document.body.removeChild(dummy);
+                Swal.fire({
+                    type: 'success',
+                    html: 'Link URL telah disalin.<br>Kamu dapat membagikannya sekarang.'
+                });
+            }
+        </script>
+    </body>
+</html>
