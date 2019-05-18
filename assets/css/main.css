@@ -328,3 +328,7 @@ body {
         width: 1170px;
     }
 }
+
+.disabled {
+    cursor: not-allowed;
+}
