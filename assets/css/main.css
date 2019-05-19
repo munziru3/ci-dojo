@@ -2,17 +2,48 @@
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
  */
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/*** Works on common browsers ***/
+::selection {
+    background-color: rgb(82, 101, 143);
+    color: #ffffff;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: rgb(82, 101, 143);
+    color: #ffffff;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: rgb(82, 101, 143);
+    color: #ffffff;
+}
+
+::-ms-selection {
+    background-color: rgb(82, 101, 143);
+    color: #ffffff;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: rgb(82, 101, 143);
+    color: #ffffff;
+}
+
 body {
     color: #333;
 }
-
-
 
 a {
     text-decoration: none;
     color: #1b98f8;
 }
-
 
 /*
  * -- HELPER STYLES --
@@ -113,25 +144,28 @@ a {
     color: rgb(75, 113, 151);
 }
 
-.email-label-personal,
-.email-label-work,
-.email-label-travel {
+.box-label-yellow,
+.box-label-blue,
+.box-label-green,
+.box-label-red {
     width: 15px;
     height: 15px;
     display: inline-block;
     margin-right: 0.5em;
     border-radius: 3px;
 }
-.email-label-personal {
+.box-label-yellow {
     background: #ffc94c;
 }
-.email-label-work {
+.box-label-blue {
     background: #41ccb4;
 }
-.email-label-travel {
+.box-label-green {
     background: #40c365;
 }
-
+.box-label-red {
+    background: #c34040;
+}
 
 /* Email Item Styles */
 .email-item {
@@ -331,4 +365,28 @@ body {
 
 .disabled {
     cursor: not-allowed;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+button, a, .image-button, .pure-img, div.clickable {
+    transition: all ease-in-out 0.2s;
+}
+
+button:hover {
+    background-color: rgb(55, 60, 90);
+}
+
+a:hover {
+    color: rgb(55, 60, 90);
+}
+
+.image-button:hover, .pure-img:hover, div.clickable:hover {
+    opacity: 0.5 !important;
+}
+
+.pure-menu-heading {
+    margin-top: 4px;
 }

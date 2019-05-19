@@ -4,30 +4,43 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="title" content="CI Dojo">
-        <meta name="description" content="Kitab saktinya Codeigniter.">
+        <meta name="description" content="Kitab Saktinya Codeigniter.">
         <title>CI Dojo</title>
-        <link rel=icon type=image/webp href=assets/img/favicon.webp>
-        <link rel=apple-touch-icon href=assets/img/favicon.webp>
-        <link rel="stylesheet" href="assets/css/pure.min.css"><!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="assets/css/main.min.css"><!--<![endif]-->
-        <link rel="stylesheet" href="assets/css/grid.min.css">
-        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/email-old-ie.min.css"><![endif]--> 
+        <link type="image/webp" rel=icon href="assets/img/favicon.webp">
+        <link rel="apple-touch-icon" href="assets/img/favicon.webp">
+        <link type="text/css" rel="stylesheet" href="assets/css/pure.min.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/grid.min.css"><!--[if gt IE 8]><!-->
+        <link type="text/css" rel="stylesheet" href="assets/css/main.min.css"><!--<![endif]-->
+        <link type="text/css" rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <!--[if lte IE 8]><link type="text/css" rel="stylesheet" href="assets/css/email-old-ie.min.css"><![endif]-->
+        <style type="text/css">
+            html, button, input, select, textarea,
+            .pure-g [class *= "pure-u"] {
+                font-family: 'Josefin Sans', sans-serif;
+            }
+        </style>
     </head> 
     <body>
         <div id="layout" class="content pure-g">
             <div id="nav" class="pure-u-1">
-                <a href="#" class="nav-menu-button"><i class="fa fa-bars light" style="margin-top: 4px;"></i></a>
+                <a class="nav-menu-button clickable"><i class="fa fa-bars light" style="margin-top: 4px;"></i></a>
                 <div class="nav-inner">
                     <h1 class="light">CI Dojo</h1>
                     <div class="pure-menu">
                         <ul class="pure-menu-list">
                             <li class="pure-menu-item"><a href="index.html" class="pure-menu-link active"><i class="fa fa-info-circle" style="margin-right: 6px;"></i>Tentang</a></li>
+                            <li class="pure-menu-item"><a href="daftar-isi" class="pure-menu-link"><i class="fa fa-list" style="margin-right: 6px;"></i>Daftar Isi</a></li>
                             <li class="pure-menu-heading">Bab I</li>
-                            <li class="pure-menu-item"><a href="codeigniter" class="pure-menu-link"><span class="email-label-personal"></span>Codeigniter</a></li>
-                            <li class="pure-menu-item"><a href="mvc" class="pure-menu-link"><span class="email-label-travel"></span>MVC</a></li>
-                            <li class="pure-menu-item"><a href="php" class="pure-menu-link"><span class="email-label-work"></span>PHP Dasar</a></li>
-                            <li class="pure-menu-item"><a href="php" class="pure-menu-link"><span class="email-label-work"></span>HTML Dasar</a></li>
-                            <li class="pure-menu-item"><a href="php" class="pure-menu-link"><span class="email-label-work"></span>CSS Dasar</a></li>
+                            <li class="pure-menu-item"><a href="bab-1/codeigniter" class="pure-menu-link"><span class="box-label-yellow"></span>Codeigniter</a></li>
+                            <li class="pure-menu-item"><a href="bab-1/mvc" class="pure-menu-link"><span class="box-label-yellow"></span>MVC</a></li>
+                            <li class="pure-menu-item"><a href="bab-1/php" class="pure-menu-link"><span class="box-label-blue"></span>PHP Dasar</a></li>
+                            <li class="pure-menu-item"><a href="bab-1/html" class="pure-menu-link"><span class="box-label-blue"></span>HTML Dasar</a></li>
+                            <li class="pure-menu-item"><a href="bab-1/css" class="pure-menu-link"><span class="box-label-blue"></span>CSS Dasar</a></li>
+                            <li class="pure-menu-item"><a href="bab-1/js" class="pure-menu-link"><span class="box-label-blue"></span>JS Dasar</a></li>
+                            <li class="pure-menu-item"><a href="bab-1/quiz-1" class="pure-menu-link"><span class="box-label-red"></span>Quiz</a></li>
+                            <li class="pure-menu-item"><a href="bab-1/review" class="pure-menu-link"><span class="box-label-green"></span>Review</a></li>
+                            <li class="pure-menu-heading">Bab II</li>
+                            <li class="pure-menu-item coming-soon"><a class="pure-menu-link clickable">Kaming sun...</a></li>
                         </ul>
                     </div>
                 </div>
@@ -39,8 +52,11 @@
                             <h1 class="email-content-title">Tentang Web</h1>
                             <p class="email-content-subtitle">
                                 <!-- <small><span>ditulis oleh </span><a href="https://ezralazuardy.tk" target="_blank">Ezra Lazuardy</a></small><br/> -->
-                                <button onclick="javascript:share(window.location.href);" class="primary-button pure-button bg-vader" style="margin-top: 8px;">
+                                <button title="Bagikan halaman CI Dojo" onclick="javascript:share(window.location.href);" class="primary-button pure-button bg-vader" style="margin-top: 8px;">
                                     <i class="fa fa-share-alt" style="margin-right: 4px;"></i> Bagikan
+                                </button>
+                                <button title="Kuy mulai belajar!" onclick="javascript:window.location.href='daftar-isi'" class="primary-button pure-button bg-vader" style="margin-top: 8px;">
+                                    <i class="fa fa-arrow-right" style="margin-right: 4px;"></i> Mulai Belajar
                                 </button>
                             </p>
                         </div>
@@ -52,7 +68,7 @@
                                     <b>Hello World!</b>, selamat datang di <i>ce i dojo</i>, kitab saktinya kode igniter.
                                 </p>
                                 <p>
-                                    Disini kamu bisa belajar tentang Framework PHP yang cukup terkenal, yaitu si Codeigniter. <br>Dilengkapi dengan 
+                                    Disini kamu bisa belajar tentang Framework PHP yang cukup terkenal, yaitu si Codeigniter. Dilengkapi dengan 
                                     dokumentasi berbahasa Indonesia, diringkas secara singkat, namun padat dan jelas.
                                 </p>
                                 <p>
@@ -60,8 +76,8 @@
                                     Mulai dari konfigurasi CI, konsep MVC (Model View Controller), CRUD database, hingga library akan dibahas disini.
                                 </p>
                                 <p>
-                                    Nggak cuma CI, disini juga membahas tentang programming Web dasar dengan HTML, CSS, JS,
-                                    dan framework - framework frontend yang terkenal.
+                                    Nggak cuma itu, disini juga membahas tentang pemrograman Web dasar dengan HTML, CSS, JS,
+                                    dan penggunaan framework frontend.
                                 </p>
                                 <p></p>
                                     Semua konten CI Dojo bersifat <b>Open Source</b>, dapat digunakan secara bebas oleh publik.<br>
@@ -69,68 +85,94 @@
                                 </p>
                             </div>
                             <div class="pure-u-md-2-5 pure-u-1" style="text-align: center; padding-top: 32px; padding-bottom: 30px;">
-                                <a href="https://ezralazuardy.tk/ci-dojo/">
+                                <div title="Informasi CI Dojo" class="clickable" onclick="javascript:aboutCIDojo();">
                                     <img src="assets/img/favicon.webp" width="100" height="100" alt="CI Dojo" />
-                                    <h1 class="dark" style="margin-top: 2px; font-size: 1.8rem;">CI Dojo</h2>
-                                </a><br/>
+                                    <h2 class="dark" style="margin-top: 8px; font-size: 1.8rem;">CI Dojo</h2>
+                                </div>
                                 <b>Kontributor:</b>
                                 <p style="margin-top: 8px;">
                                     <!-- <a href="https://alifianadexe.github.io/" target="_blank">Alifian Adexe</a><br/> -->
-                                    <a href="https://ezralazuardy.tk/" target="_blank">Ezra Lazuardy</a><br/>
-                                    <button onclick="javascript:joinContributor();" class="primary-button pure-button bg-vader" style="margin-top: 20px;">
+                                    <a title="Profil Ezra Lazuardy" href="https://ezralazuardy.tk/" target="_blank">Ezra Lazuardy</a><br/>
+                                    <button title="Gabung menjadi kontributor CI Dojo" disabled onclick="javascript:joinContributor();" class="primary-button pure-button bg-vader" style="margin-top: 20px;">
                                         <i class="fa fa-user" style="margin-right: 4px;"></i> Kuy jadi kontributor!
-                                    </button>
+                                    </button>   
                                 </p>
                             </div>
                         </div>
                         <div>
                             <b>Perangkat lunak pihak ketiga</b>
-                            <div style="margin-top: 8px; margin-bottom: 16px;">
+                            <div style="margin-top: 8px; margin-bottom: 18px;">
                                 Beberapa perangkat lunak yang digunakan <b>CI Dojo</b>.
                             </div>
-                            <div>
-                                <a href="https://purecss.io/" target="_blank" style="margin-right: 20px;">
-                                    <img src="assets/img/logo_pure.webp" width="120" height="20" alt="PureCSS" style=" margin-bottom: 20px;" />
-                                </a>
-                                <a href="https://github.com/" target="_blank" style="margin-right: 20px;">
-                                    <img src="assets/img/logo_github.webp" width="80" height="20" alt="GitHub" style=" margin-bottom: 20px;" />
-                                </a>
-                                <a href="https://sweetalert2.github.io/" target="_blank" style="margin-right: 20px;">
-                                    <img src="assets/img/logo_swal.webp" width="100" height="20" alt="SweetAlert" style=" margin-bottom: 20px;" />
-                                </a>
-                                <a href="https://yuilibrary.com/" target="_blank" style="margin-right: 20px;">
-                                    <img src="assets/img/logo_yui.webp" width="60" height="30" alt="YUI" style=" margin-bottom: 20px;" />
-                                </a>
+                            <div class="pure-g">
+                                <div class="pure-lg-1-3" style="padding-right: 40px">
+                                    <a title="PureCSS" href="https://purecss.io/" target="_blank">
+                                        <img async="on" class="pure-img" src="assets/img/logo_pure.webp" width="180" height="30" alt="PureCSS" style="margin-bottom: 20px;"/>
+                                    </a>
+                                    <a title="jQuery" href="https://jquery.com/" target="_blank">
+                                        <img async="on" class="pure-img" src="assets/img/logo_jquery.webp" width="60" height="60" alt="jQuery" style="margin-bottom: 20px;"/>
+                                    </a>
+                                    <a title="FontAwesome" href="https://fontawesome.com/" target="_blank">
+                                        <img async="on" class="pure-img" src="assets/img/logo_fontawesome.webp" width="60" height="60" alt="FontAwesome" style="margin-bottom: 20px;"/>
+                                    </a>
+                                </div>
+                                <div class="pure-lg-1-3" style="padding-right: 40px">
+                                    <a title="SweetAlert" href="https://sweetalert2.github.io/" target="_blank">
+                                        <img async="on" class="pure-img" src="assets/img/logo_swal.webp" width="150" height="30" alt="SweetAlert" style="margin-bottom: 20px;"/>
+                                    </a>
+                                    <a title="Codeigniter" href="https://www.codeigniter.com/" target="_blank">
+                                        <img async="on" class="pure-img" src="assets/img/logo_codeigniter.webp" width="80" height="80" alt="CodeIgniter" style="margin-bottom: 20px;"/>
+                                    </a>
+                                    <a title="YUI" href="https://yuilibrary.com/" target="_blank">
+                                        <img async="on" class="pure-img" src="assets/img/logo_yui.webp" width="80" height="40" alt="YUI" style="margin-bottom: 20px;"/>
+                                    </a>
+                                </div>
+                                <div class="pure-lg-1-3">
+                                    <a title="Bulma" href="https://bulma.io/" target="_blank">
+                                        <img async="on" class="pure-img" src="assets/img/logo_bulma.webp" width="150" height="30" alt="Bulma" style="margin-bottom: 20px;"/>
+                                    </a>
+                                    <a title="Google Fonts" href="https://fonts.google.com/" target="_blank">
+                                        <img async="on" class="pure-img" src="assets/img/logo_googlefonts.webp" width="120" height="30" alt="Google Fonts" style="margin-bottom: 20px;"/>
+                                    </a>
+                                    <a title="GitHub" href="https://github.com/" target="_blank">
+                                        <img async="on" class="pure-img" src="assets/img/logo_github.webp" width="120" height="30" alt="GitHub"style="margin-bottom: 20px;"/>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="email-content-footer pure-g">
-                        <div class="pure-u-lg-1-3 pure-u-1" style="padding-top: 22px; padding-bottom: 22px;">
-                            <div>
-                                <a target="_blank" href="//www.dmca.com/Protection/Status.aspx?ID=c7d86512-c3e5-482f-a7f4-0e6546939426" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca-badge-w100-5x1-04.png?ID=c7d86512-c3e5-482f-a7f4-0e6546939426"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
-                            </div>
+                        <div class="pure-u-lg-1-3 pure-u-1" style="padding-top: 24px; padding-bottom: 22px;">
+                            <a title="DMCA.com Protection Status" target="_blank" href="//www.dmca.com/Protection/Status.aspx?ID=c7d86512-c3e5-482f-a7f4-0e6546939426" class="dmca-badge image-button"><img src="assets/img/logo_dmca.webp" alt="DMCA.com Protection Status"/></a>
                             <h4 class="email-content-title">© 2019. CI Dojo.</h4>
                         </div>
                         <div class="pure-u-lg-1-3 pure-u-1">
                             <h4 class="email-content-title">Kontak</h4>
                             <p class="email-content-subtitle" style="margin-bottom: 22px;">
-                                <span><a href="mailto:ezralucio@gmail.com" class="vader"><i class="fa fa-envelope" style="margin-top: 8px; margin-right: 8px;"></i>ezralucio@gmail.com</a></span>
+                                <span><a title="Email kontak" class="vader" href="mailto:ezralucio@gmail.com" target="_blank"><i class="fa fa-envelope" style="margin-top: 8px; margin-right: 8px;"></i>ezralucio@gmail.com</a></span>
                             </p>
                         </div>
                         <div class="pure-u-lg-1-3 pure-u-1">
                             <h4 class="email-content-title">Tentang</h4>
                             <p class="email-content-subtitle">
-                                <span><a href="https://ezralazuardy.tk/ci-dojo" class="vader"><i class="fa fa-info-circle" style="margin-top: 8px; margin-right: 8px;"></i>CI Dojo</a></span>
+                                <span><a title="Tentang CI Dojo" href="https://ezralazuardy.tk/ci-dojo" class="vader"><i class="fa fa-info-circle" style="margin-top: 8px; margin-right: 8px;"></i>CI Dojo</a></span>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script async defer type="text/javascript" src="assets/js/fontawesome.min.js"></script>
         <script async defer type="text/javascript" src="assets/js/sweetalert.min.js"></script>
         <script type="text/javascript" src="assets/js/yui.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/webfontloader.min.js"></script>
         <script type="text/javascript">
+            WebFont.load({
+                google: {
+                    families: ['Josefin Sans']
+                },
+                timeout: 2000
+            });
             YUI().use('node-base', 'node-event-delegate', function (Y) {
                 var menuButton = Y.one('.nav-menu-button'), nav = Y.one('#nav');
                 menuButton.on('click', function (e) {
@@ -149,19 +191,63 @@
                     html: 'Link URL telah disalin.<br>Kamu dapat membagikannya sekarang.'
                 });
             }
-            function joinContributor() {
+            function aboutCIDojo() {
                 Swal.fire({
-                    type: 'info',
-                    html: 'Anda perlu mengisi form untuk mendaftar sebagai kontributor <b>CI Dojo</b>.',
+                    html: '<img src="assets/img/favicon.webp" width="100" height="100" alt="CI Dojo" /><h2 class="dark" style="margin-top: 8px; font-size: 1.8rem;">CI Dojo</h2><p style="margin-top: -16px;">versi 0.0.1</p>Sebuah dokumentasi framework Codeigniter, ditulis dan dirangkum dengan Bahasa Indonesia.',
+                    showCloseButton: true,
+                    showConfirmButton: false
+                });
+            }
+            function joinContributor(status = true) {
+                if(status) {
+                    Swal.fire({
+                        type: 'info',
+                        html: 'Anda perlu mengisi form untuk mendaftar sebagai kontributor <b>CI Dojo</b>.',
+                        showCancelButton: true,
+                        confirmButtonText: 'Isi Form',
+                        cancelButtonText: 'Batal'
+                    }).then((result) => {
+                        if(result.value) {
+                            window.open('https://s.id/joincidojo');
+                        }
+                    });
+                } else {
+                    Swal.fire({
+                        type: 'warning',
+                        html: 'Maap gan!, belum bisa join sekarang.<br/><b>CI Dojo</b> lagi sibuk berbenah, coba lagi nanti ya.'
+                    });
+                }
+            }
+            function comingSoon() {
+                Swal.fire({
+                    html:   'pergi ke Semarang beli es degan,<br/>'+
+                            'eh pulangnya naik pesawat...<br/>'+
+                            'yang sabar atuh gan,<br/>'+
+                            'kontennya belum dibuat...',
+                    showCloseButton: true,
+                    showConfirmButton: false,
+                    showCancelButton: false,
+                    footer: '<a class="clickable" onclick="javascript:aboutUpdate();">Kapan updetnya?</a>'
+                });
+            }
+            function aboutUpdate() {
+                Swal.fire({
+                    html:   '<p>CI Dojo merupakan organisasi non-profit. Semua konten dibuat dengan sukarela oleh para kontributor tanpa adanya imbalan apapun.</p>'+
+                            '<p>Ada atau tidaknya konten tergantung dari aktif tidaknya kontributor. Tertarik buat nyumbang konten disini?<br/>Kuy join la.</p>',
                     showCancelButton: true,
-                    confirmButtonText: 'Isi Form',
-                    cancelButtonText: 'Batal'
+                    confirmButtonText: 'Gabung jadi kontributor',
+                    cancelButtonText: 'Ashiaaaap'
                 }).then((result) => {
                     if(result.value) {
-                        window.open('https://s.id/joincidojo');
+                        joinContributor(false);
                     }
                 });
             }
+            $(document).ready(function() {
+                $('.coming-soon').off('click').click(function() {
+                    comingSoon();
+                });
+            });
         </script>
     </body>
 </html>
