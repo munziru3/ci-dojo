@@ -175,13 +175,13 @@
         <script async defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/yui/3.18.0/yui/yui-min.js" onload="javascript:initYUI();"></script>
         <script async defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" onload="javascript:initFont();"></script>
         <script async defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/12.0.0/lazyload.min.js" onload="javascript:initLazyLoad();"></script>
-        <script async defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+        <script async defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript">
             function initYUI() {
                 YUI().use('node-base', 'node-event-delegate', function (Y) {
                     var menuButton = Y.one('.nav-menu-button'), nav = Y.one('#nav');
-                    menuButton.off('click').click(function(e) {
+                    menuButton.on('click', function(e) {
                         nav.toggleClass('active');
                     }, { passive: true });
                 });
@@ -262,9 +262,9 @@
                 });
             }
             $(document).ready(function() {
-                $('.coming-soon').off('click').click(function() {
+                $('.coming-soon').off('click').on('click', { passive: true }, function() {
                     comingSoon();
-                }, { passive: true });
+                });
             });
         </script>
     </body>
