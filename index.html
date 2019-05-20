@@ -181,9 +181,9 @@
             function initYUI() {
                 YUI().use('node-base', 'node-event-delegate', function (Y) {
                     var menuButton = Y.one('.nav-menu-button'), nav = Y.one('#nav');
-                    menuButton.on('click', function (e) {
+                    menuButton.off('click').click(function(e) {
                         nav.toggleClass('active');
-                    });
+                    }, { passive: true });
                 });
             }
             function initFont() {
@@ -264,7 +264,7 @@
             $(document).ready(function() {
                 $('.coming-soon').off('click').click(function() {
                     comingSoon();
-                });
+                }, { passive: true });
             });
         </script>
     </body>
