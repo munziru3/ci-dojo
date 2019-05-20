@@ -67,7 +67,46 @@
                         <div class="pure-g">
                             <div class="pure-u-md-5-5 pure-u-1">
                                 <p>
-
+                                    <h3>Skema</h3>
+                                    <div style="margin-bottom: 40px;">
+                                        <p><span class="box-label-yellow"></span><b>Konsep Dasar</b></p>
+                                        <p><span class="box-label-blue"></span><b>Materi Inti</b></p>
+                                        <p><span class="box-label-red"></span><b>Quiz & Ujian</b></p>
+                                        <p><span class="box-label-green"></span><b>Review / Evaluasi</b></p>
+                                    </div>
+                                </p>
+                                <p>
+                                    <h2>Bab 1 - Pemahaman</h2>
+                                    <div>
+                                        <a rel="noopener" href="../bab-1/codeigniter" class="pure-menu-link"><span class="box-label-yellow"></span>Codeigniter</a>
+                                    </div>
+                                    <div>
+                                        <a rel="noopener" href="../bab-1/mvc" class="pure-menu-link"><span class="box-label-yellow"></span>MVC</a>
+                                    </div>
+                                    <div>
+                                        <a rel="noopener" href="../bab-1/php" class="pure-menu-link"><span class="box-label-blue"></span>PHP Dasar</a>
+                                    </div>
+                                    <div>
+                                        <a rel="noopener" href="../bab-1/html" class="pure-menu-link"><span class="box-label-blue"></span>HTML Dasar</a>
+                                    </div>
+                                    <div>
+                                        <a rel="noopener" href="../bab-1/css" class="pure-menu-link"><span class="box-label-blue"></span>CSS Dasar</a>
+                                    </div>
+                                    <div>
+                                        <a rel="noopener" href="../bab-1/js" class="pure-menu-link"><span class="box-label-blue"></span>JS Dasar</a>
+                                    </div>
+                                    <div>
+                                        <a rel="noopener" href="../bab-1/quiz-1" class="pure-menu-link"><span class="box-label-red"></span>Quiz</a>
+                                    </div>
+                                    <div>
+                                        <a rel="noopener" href="../bab-1/review" class="pure-menu-link"><span class="box-label-green"></span>Review</a>
+                                    </div>
+                                </p>
+                                <p>
+                                    <h2>Bab 2 - Instalasi CI</h2>
+                                    <div>
+                                        <a class="pure-menu-link clickable coming-soon">Kaming sun...</a>
+                                    </div>
                                 </p>
                             </div>
                         </div>
@@ -99,6 +138,7 @@
         <script async defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript">
+            var lazyLoadInstance;
             function initYUI() {
                 YUI().use('node-base', 'node-event-delegate', function (Y) {
                     var menuButton = Y.one('.nav-menu-button'), nav = Y.one('#nav');
@@ -116,7 +156,7 @@
                 });
             }
             function initLazyLoad() {
-                var lazyLoadInstance = new LazyLoad({elements_selector: "img"});
+                lazyLoadInstance = new LazyLoad({elements_selector: "img"});
             }
             function share(link = '') {
                 var dummy = document.createElement("textarea");
@@ -186,7 +226,7 @@
                 $('.coming-soon').off('click').on('click', { passive: true }, function() {
                     comingSoon();
                 });
-                if (lazyLoadInstance) lazyLoadInstance.update();
+                if(lazyLoadInstance) lazyLoadInstance.update();
             });
         </script>
     </body>

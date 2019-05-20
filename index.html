@@ -38,7 +38,7 @@
                     <h1 class="light">CI Dojo</h1>
                     <div class="pure-menu">
                         <ul class="pure-menu-list">
-                            <li class="pure-menu-item"><a rel="noopener" href="index.html" class="pure-menu-link active"><i class="fa fa-info-circle" style="margin-right: 6px;"></i>Tentang</a></li>
+                            <li class="pure-menu-item"><a rel="noopener" href="./" class="pure-menu-link active"><i class="fa fa-info-circle" style="margin-right: 6px;"></i>Tentang</a></li>
                             <li class="pure-menu-item"><a rel="noopener" href="daftar-isi" class="pure-menu-link"><i class="fa fa-list" style="margin-right: 6px;"></i>Daftar Isi</a></li>
                             <li class="pure-menu-heading">Bab I</li>
                             <li class="pure-menu-item"><a rel="noopener" href="bab-1/codeigniter" class="pure-menu-link"><span class="box-label-yellow"></span>Codeigniter</a></li>
@@ -61,7 +61,6 @@
                         <div class="pure-u-5-5">
                             <h1 class="email-content-title">Tentang Web</h1>
                             <p class="email-content-subtitle">
-                                <!-- <small><span>ditulis oleh </span><a rel="noopener" href="https://ezralazuardy.tk" target="_blank">Ezra Lazuardy</a></small><br/> -->
                                 <button title="Bagikan halaman CI Dojo" onclick="javascript:share(window.location.href);" class="primary-button pure-button bg-vader" style="margin-top: 8px;">
                                     <i class="fa fa-share-alt" style="margin-right: 4px;"></i> Bagikan
                                 </button>
@@ -178,6 +177,7 @@
         <script async defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript">
+            var lazyLoadInstance;
             function initYUI() {
                 YUI().use('node-base', 'node-event-delegate', function (Y) {
                     var menuButton = Y.one('.nav-menu-button'), nav = Y.one('#nav');
@@ -195,7 +195,7 @@
                 });
             }
             function initLazyLoad() {
-                var lazyLoadInstance = new LazyLoad({elements_selector: "img"});
+                lazyLoadInstance = new LazyLoad({elements_selector: "img"});
             }
             function share(link = '') {
                 var dummy = document.createElement("textarea");
@@ -265,7 +265,7 @@
                 $('.coming-soon').off('click').on('click', { passive: true }, function() {
                     comingSoon();
                 });
-                if (lazyLoadInstance) lazyLoadInstance.update();
+                if(lazyLoadInstance) lazyLoadInstance.update();
             });
         </script>
     </body>
